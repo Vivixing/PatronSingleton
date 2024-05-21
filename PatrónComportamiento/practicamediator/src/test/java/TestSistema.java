@@ -22,7 +22,7 @@ public class TestSistema {
 		coche = new Coche();
 		concreteMediator = new ConcreteMediator();
 
-		concreteMediator.setCoche(coche);
+
 		concreteMediator.setRadio(radio);
 		concreteMediator.setTelefono(telefono);
 

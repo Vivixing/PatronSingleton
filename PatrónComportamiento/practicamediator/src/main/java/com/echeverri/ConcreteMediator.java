@@ -1,13 +1,9 @@
 package com.echeverri;
 
 public class ConcreteMediator implements Mediator{
-    private Coche coche;
     private Radio radio;
     private Telefono telefono;
 
-    public void setCoche(Coche coche){
-        this.coche=coche;
-    }
 
     public void setRadio(Radio radio){
         this.radio=radio;
