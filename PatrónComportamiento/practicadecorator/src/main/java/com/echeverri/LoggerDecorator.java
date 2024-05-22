@@ -13,7 +13,7 @@ public class LoggerDecorator implements BaseDatos {
     }
     @Override
     public void inserta(String registro) {
-        log.add("Inserta".concat(registro));
+        log.add("inserta ".concat(registro));
         baseDatos.inserta(registro);
     }
 
