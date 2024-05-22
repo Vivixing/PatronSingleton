@@ -8,20 +8,19 @@ import org.junit.Test;
 import com.echeverri.BaseDatos;
 import com.echeverri.BaseDatosMemoria;
 import com.echeverri.Logger;
+import com.echeverri.LoggerDecorator;
 
 public class TestBaseDatosConLogger {
 
-	private Logger logger;
-	private BaseDatos sinLogger;
+	private Logger logger = new Logger();
+	private BaseDatos sinLogger = new BaseDatosMemoria();
 	private BaseDatos bbdd;
 	
 	@Before
 	public void init() {
-		logger = new Logger();
-        sinLogger = new BaseDatosMemoria();
 		// construir un LoggerDecorator usando la base de datos sinLogger y el
 		// logger
-		bbdd = null;
+		bbdd = new LoggerDecorator(logger, sinLogger);
 	}
 	
 	
